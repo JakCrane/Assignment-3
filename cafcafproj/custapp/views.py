@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.views import View
+from django.core.mail import send_mail
+from .models import MenuItem, Category, OrderModel
 
 
 class Index(View):
@@ -14,7 +16,8 @@ class About(View):
 
 class Order(View):
     def get(self, request, *args, **kwargs):
-        appetizers = MenuItem.objects.filter(category__name__contains='Appetizer')
+        appetizers = MenuItem.objects.filter(
+            category__name__contains='Appetizer')
         entrees = MenuItem.objects.filter(category__name__contains='Entree')
         drinks = MenuItem.objects.filter(category__name__contains='Drink')
         desserts = MenuItem.objects.filter(category__name__contains='Dessert')
@@ -27,8 +30,13 @@ class Order(View):
         }
 
         return render(request, 'custapp/order.html', context)
-  
+
     def post(self, request, *args, **kwargs):
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        street = request.POST.get('street')
+        city = request.POST.get('city')
+        postcode = request.POST.get('postcode')
         order_items = {
             'items': []
         }
@@ -41,21 +49,40 @@ class Order(View):
                 'price': menu_item.price,
             }
 
-            order_items['item'].append(item_data)
+            order_items['items'].append(item_data)
 
-            price = 0
-            item_ids = []
+        price = 0
+        item_ids = []
 
-            for item in order_items['item']:
-                price += item['price']
-                item_ids.append(item['id'])
+        for item in order_items['items']:
+            price += item['price']
+            item_ids.append(item['id'])
 
-            order = OrderModel.objects.create(price=price)
-            order.items.add(*item_id)
+        order = OrderModel.objects.create(
+            price=price,
+            name=name,
+            email=email,
+            street=street,
+            city=city,
+            postcode=postcode,
+            )
+        order.items.add(*item_ids)
 
-            context = {
-                'items': order_items['items'],
-                'price': price,
-            }
+        body = ("Thankyou for your order. Your food is being made and will be delivered soon!"
+                f'Your total: {price}\n'
+                'Cheers')
 
-            return render(request, 'custapp/order_confirmation.html', context)
+        send_mail(
+            "Thankyou for your order",
+            body,
+            'example@example.com',
+            [email],
+            fail_silently=False,
+        )
+
+        context = {
+            'items': order_items['items'],
+            'price': price,
+        }
+
+        return render(request, 'custapp/order_confirmation.html', context)

@@ -31,17 +31,17 @@
                     {% for entree in entrees %}
                     <div class="row mt-4">
                         <div class="col-md-2 col-sm-12">
-                            <img class="rounded" src="{{ entre.image.url }}" width="150" height="100"/>
+                            <img class="rounded" src="{{ entree.image.url }}" width="150" height="100"/>
                         </div>
                         <div class="col-md-8 col-sm-12">
                             <div class="d-flex flex-row">
                                 <div class="form-group form-check">
-                                    <input type="checkbox" name="items[]" class="form-check-input" value="{{ entre.pk }}">
-                                    <label class="form-check-label">{{ entre.name }}</label>
+                                    <input type="checkbox" name="items[]" class="form-check-input" value="{{ entree.pk }}">
+                                    <label class="form-check-label">{{ entree.name }}</label>
                                 </div>
-                                <p class="font-weight-bold pl-5">{{ entre.price }}</p>
+                                <p class="font-weight-bold pl-5">{{ entree.price }}</p>
                             </div>
-                            <p>{{ entre.description }}</p>
+                            <p>{{ entree.description }}</p>
                         </div>
                     </div>
                     <hr />
@@ -89,8 +89,59 @@
                     <hr />
                     {% endfor %}
                 </div>
-
-                <button class="btn btn-dark mt-5">Place Order!</button>
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group pt-3">
+                            <label for="name">Full Name</label>
+                            <input required class="form-control" type="text" placeholder="Your Name" name="name">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group pt-3">
+                            <label for="email">Email Address</label>
+                            <input required class="form-control" type="text" placeholder="example@company.co.uk" name="email">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="form-group pt-3">
+                            <label for="street">Street</label>
+                            <input required class="form-control" type="text" placeholder="King Street" name="street">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="form-group pt-3">
+                            <label for="city">City</label>
+                            <input required class="form-control" type="text" placeholder="Chelsea" name="city">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="form-group pt-3">
+                            <label for="postcode">Post Code</label>
+                            <input required class="form-control" type="text" placeholder="SW10 0AD" name="postcode">
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-dark mt-5" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+                    Submit Order!
+                </button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Confirm Your Order?</h5>
+                                <button type="button" class="close" data-mdb-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Go Back</button>
+                                <button class="btn btn-dark" type="submit">Place Order!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
