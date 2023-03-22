@@ -28,6 +28,7 @@ class OrderModel(models.Model):
     street = models.CharField(max_length=50, blank=True)
     city = models.CharField(max_length=50, blank=True)
     postcode = models.CharField(max_length=8, blank=True, null=True)
-
+    is_paid = models.BooleanField(default=False)
+    
     def __str__(self):
         return f'Order: {self.created_on.strftime("%b %d %I %M %p")}'
