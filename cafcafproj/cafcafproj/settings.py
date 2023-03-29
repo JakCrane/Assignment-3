@@ -144,5 +144,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ACCOUNT_ADAPTER = 'custapp.account_adapter.NoNewUsersAccountAdapter'
+LOGIN_REDIRECT_URL = 'dashboard'
+
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
