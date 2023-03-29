@@ -14,16 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from custapp.views import Index, About, Order, OrderConfirmation, OrderPayConfirmation
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
     path('', Index.as_view(), name='index'),
     path('about/', About.as_view(), name='about'),
     path('order/', Order.as_view(), name='order'),
-    path('order_confirmation/<int:pk>', OrderConfirmation.as_view(), name='order_confirmation'),
-    path('order_pay_confirmation/', OrderPayConfirmation.as_view(), name='order_pay_confirmation'),
+    path('order_confirmation/<int:pk>', OrderConfirmation.as_view(),
+         name='order_confirmation'),
+    path('payment_confirmation/', OrderPayConfirmation.as_view(),
+         name='payment_confirmation'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
