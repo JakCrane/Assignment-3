@@ -22,6 +22,7 @@ from custapp.views import Index, About, Order, OrderConfirmation, OrderPayConfir
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
+    path('cafe/', include('cafapp.urls')),
     path('', Index.as_view(), name='index'),
     path('about/', About.as_view(), name='about'),
     path('order/', Order.as_view(), name='order'),
