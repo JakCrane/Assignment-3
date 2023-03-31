@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from custapp.views import Index, About, Order, OrderConfirmation, OrderPayConfirmation
+from custapp.views import Index, About, Order, OrderConfirmation, OrderPayConfirmation, Menu, MenuSearch
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +25,8 @@ urlpatterns = [
     path('cafe/', include('cafapp.urls')),
     path('', Index.as_view(), name='index'),
     path('about/', About.as_view(), name='about'),
+    path('menu/', Menu.as_view(), name='menu'),
+    path('menu/search/', MenuSearch.as_view(), name='menu_search'),
     path('order/', Order.as_view(), name='order'),
     path('order_confirmation/<int:pk>', OrderConfirmation.as_view(),
          name='order_confirmation'),

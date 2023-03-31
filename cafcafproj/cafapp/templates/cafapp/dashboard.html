@@ -47,6 +47,11 @@
                             <i style="color: red;" class="fa fa-times"></i>
                             {% endif %}
                         </td>
+                        <td>
+                            <a href='{% url "order_details" order.pk %}'>
+                                <i style="color: gray;" class="fa fa-edit"></i>
+                            </a>
+                        </td>
                     </tr>
                     {% endfor %}
                 </tbody>

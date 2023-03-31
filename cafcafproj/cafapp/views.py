@@ -15,9 +15,12 @@ class Dashboard(LoginRequiredMixin, UserPassesTestMixin, View):
         total_revenue = 0
         for order in orders:
             total_revenue += order.price
-
+        unshipped_orders = []
+        for order in orders:
+            if not order.is_shipped:
+                unshipped_orders.append(order)
         context = {
-            'orders': orders,
+            'orders': unshipped_orders,
             'total_revenue': total_revenue,
             'total_orders': len(orders),
         }
@@ -30,6 +33,15 @@ class Dashboard(LoginRequiredMixin, UserPassesTestMixin, View):
 class OrderDetails(LoginRequiredMixin, UserPassesTestMixin, View):
     def get(self, request, pk, *args, **kwargs):
         order = OrderModel.objects.get(pk=pk)
+        context = {
+            'order': order,
+        }
+        return render(request, 'cafapp/order_details.html', context)
+
+    def post(self, request, pk, *args, **kwargs):
+        order = OrderModel.objects.get(pk=pk)
+        order.is_shipped = True
+        order.save()
         context = {
             'order': order,
         }
