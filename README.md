@@ -67,82 +67,75 @@ You can view the live site here:- `IMPLEMENT THIS`
 # User Experience - UX
 
 ## Site Aims
-
-* Incredible India is a website mainly meant to explore the Indian tourist destinattions with a good user experience.
-* The site aims to provide user with a visually pleasing and informative website that is intuitive to use and easy to navigate.
-* This website provides the user with the ability to read and view posts, as well as tools that allow users to search for a particular destination posts.
-* All users who sign up and sign in, can access the features of add post, like/unlike and comment on a blog post of this website.
-* User can access all the features of the website and can read, create, edit, and delete their own posts.
+* Meatless Munchies aims to provide a hearty and delicious late night takeaway food for vegetarians and vegans quickly and efficiently.
+* The site should be easy to navigate for tired or intoxicated people.
+* This site also aims to provide users with visually pleasing images and mouthwatering descriptions of the food.
+* Meatless Munchies aims to fill a gap in the market of comfort food aimed at vegetarian and vegan people.
+* Staff users are able to see the orders placed and mark them as delivered and delete orders.
+* Customer users can place orders.
+* Superusers can create orders, read the data, update if the orders have been paid for and delete orders.
 
 ## Agile Methodology
 
-The Agile Methodology was used to plan this project. This was implemented through Github and the Project Board. Through the use of the Kanban board in the projects view in Github, the project was divided into a few different sections: 
+The Agile Methodology was used to plan this project. This was implemented through Github and Trello. Through the use of the Kanban board in Trello, the project was divided into a few different sections: 
 
-* To Do- (All the User stories were initially entered in the 'To Do' column)
-* In Progress- (then during development story they were moved into the 'In Progress' column)
-* Done- (and then finally they get moved into 'Done' once the development completes)
+* To Do - All the tasks were initially entered in the 'To Do' column.
+* In Progress - During development they were moved into the 'In Progress' column to help focus on tasks in a planned order.
+* Done - They were then moved into 'Done' once the development on them was complete. this gave a list reference to know if additions made werent considered in the beginning or were implemented wrongly.
+* Testing- These held the testing protocols that were added as the project went along.
 
-Please find my Kanban Board with my user stories [here](https://github.com/users/jyotiyadav2508/projects/3/views/1).
+Please find my Kanban Board with my user stories
+
+<img src="assets/kanban.PNG" width="500" height="300" alt="Kanban board">
 
 ## Epics and User Stories
 
-Following Epics were created which were further developed into 19 User Stories.
+Following Epics were created which were further developed into several User Stories.
 
 ### Epic 1- Website UI
 Epic Goals for User- 
-* An intuitive User Interface with easy to navigate throughout the website 
-* Easily see the purpose of the site from the landing page
-* View a list of destinations and blog posts
-* Search bar for quick and easy access to required information
+* A streamlined User Interface to get to the food and order with minimal hurdles.
+* Obvious categories and "top picks of the week" to prevent too many decisions impeding orders.
+* Easily know the site sells vegetarian and vegan food.
+* Toggle buttons between veganism and vegetarianism and obvious indication of which items are which.
+* Search bar for menu items.
 
 #### Related User Stories:
-* As a site user I can easily see the purpose of the site from the landing page so that I can see if the site is relevant to my needs.
-* As a site user I can view a list of destinations so that I can see a list of posts relating to my specific interest.
-* As a site user I can view a paginated list of posts so that easily select a post to view.
-* As a site user I can click on a post so that I can read the full article.
-* As a site user I can use a search bar to search for a specific place so that I have quick and easy access to the information I need.
+* As a site user I can easily order food even when I am drunk or tired.
+* As a site user I can see specific dishes that look tasty so I dont have to look at every dish to make a decision.
+* As a site user I can know immediately that I am on the correct site and it is for vegans aswell as vegetarians.
+* As a site user I can chose to only see vegan options if I cannot eat non-vegan options.
+* As a site user I can use a search bar to search for a specific meal if I already know what I want.
 
-### Epic 2- Registration and Account Management
+### Epic 2- Staff usability
 Epic Goals-
-* Easy registration of an account
-* Easy Sign Up, Sign in and Sign Out
-* Upon signing in, the user should be able to like, comment on a blog post
-* Easy access to Create, Read, Update and Delete (CRUD) features upon signing in
-* Visibility of personalized blog posts and comments
+* Easy sign in page for the staff members
+* No option for non-staff members to access the backend
+* Upon signing in, the staff can see the dashboard with total revenue for the day and number of orders recieved
+* Easy access to Update the delivered status of orders
+* Removal, from the dashboard, of delivered orders to not clog up the site 
 
 #### Related User Stories:
-* As a site user, I can register an account so that I can comment and like.
-* As a registered user, I can login and logout of the site so that I can access my content.
-* As a site user, I can view the number of likes on each post so that I can see which is the most popular or viral.
-* As a site user, I can view comments on an individual post so that I can read the conversation.
-* As a registered user, I can create a post of tourist place so that I can share it with other.
+* As a staff user, I can login to see the orders dashbaord.
+* As a site owner, I can prevent the general public from accessing to the dashboard.
+* As a staff user, I can find the dashboard intuitively and select through the current orders.
+* As a staff user, I can change the data on if the order is delivered.
+* As a staff user, I want a clear and informative page that contains all the things I could want to know while working in a busy kitchen.
 
-### Epic 3- Blog Post Management
+### Epic 3- Food menu Management
 Epic Goals-
-* Create/ Update / Read / Delete blog posts.
-* View their created blog posts
-* Approve and publish a post
+* Create/ Update / Read / Delete selected menu items as they come in and out of season.
+* View them in the menu and make sure they look delicious.
+* Approve and publish nutritional information.
 
 #### Related User Stories:
-* As a site admin, I can create draft posts so that I can finish writing the content later.
-* As a site admin/author, I can create, read, update and delete posts to manage the blog content.
-* As a site admin, I can delete any comment so that I can filter out objectionable comments.
-* As a author, I can access all my blog posts easily in one place so that I can easily track my activity on the site.
-
-### Epic 4- Comments and Like Management
-Epic Goals-
-* Add /Delete and View Comments on a post
-* Like / Unlike a post
-
-#### Related User Stories:
-* As a logged-in user I can leave comments on a post so that I can be involved in the conversation.
-* As a logged-in user I can edit/delete my comments so that I can update/delete my post opinion.
-* As a logged-in user I can like or unlike a post so that I can interact with the content.
+* As a site owner, I can create planned food drafts so that they can be published on the launch of a new menu day.
+* As a site owner, I have complete control over what foods are on the menu.
+* As a site owner, I can add nutritional infromation and alergy notices.
 
 ## Tasks
 
-The tasks for the website development process was closely followed as mentioned in CI's Django module "I Think Therefore I Blog" walkthrough project. The task is generally the developers step towards preparing the app.
-The tasks that I have followed during the development phase were carried out in this order.
+The website development process closely followed CI's Django module "I Think Therefore I Blog". The Legion Scripts YouTube series "Building a Food Delivery Web App With Django and Python 3" also outlined some of the key tasks for projects similar to this one.
 
 **Before Project Inception**
 
@@ -152,29 +145,32 @@ The tasks that I have followed during the development phase were carried out in 
 
 **Creation of Project in GitPod**
 
-- Create the django project. Check details in [deployment-section](#deployment)
+- Create the Django project. Check details in [deployment-section](#deployment)
+- Create the "cafcafproj" Django project
+- Create the "custapp" Django application
+- Create the "cafapp" Django application
 - Deploying app to Heroku - Details in [deployment](#deployment) section
 - Create Database Models
-	- Set up models.py file in "blog" directory
-- Build Admin site
+	- Set up models.py file in "custapp" directory
+- Create the "custapp" views
+ - Index, About, Order
 - Set up Templates
-	- Create base.html - Navbar and Footer content, which gets extended to all the other template files
-	- Add responsiveness to navigation and footer
-    - Create index.html, view and style
-	- Set up template file features with views.py and urls.py
-  - about.html (Description about incredible india)
-  - blog.html (to view all blog posts)
-  - user_page.html (for user's personal collections)
-  - post_details.html (for detailed post view)
-  - edit_comment.html (to update the comment)
-  - destinations_post.html (to view blog post for a selected destination)
-  - add_post.html (to allow user's input for blog posts)
-  - delete_post.html (to allow user to delete his post)
-  - search.html (to search a blog post)
-  - update_post.html (to allow user to edit his post)
-  - user_post_list.html (to allow user to view all post, which he posted so far)
+	- Create base.html, navigation.html, (Navbar) and footer.html (Footer) content, which gets extended to all the other template files
+- Created "custapp" Database Models
+  - Including menu item, order and category models
+- Set up order, orderconfirmation and orderpayconfirmation templates
+  - Adding things like modals in to allow the user to double check what they ordered
+- Added views for Orderconfirmation and Orderpay
+- Added PayPal API into website
 - Install Allauth for sign in, sign up and sign out templates with-  pip3 install django-allauth 
-	- Install crispy-forms to add styles to Django account templates with-  pip3 install crispy-bootstrap5
+- Implement no new staff users
+- Implement bootstrap templates for login and logout pages	
+  - Install crispy-forms to add styles to Django account templates with-  pip3 install crispy-bootstrap5
+- Create views for "cafapp" (staff side)
+  - Dashboard and OrderDetails
+- Create templates for "cafapp"
+  - Create order_details html and dashboard html
+- Added template for menu view for "custapp" including a search feature
 - Intensive Manual Testing and Validation checks of each page and codes written
 - Final Deployment steps
 
@@ -186,24 +182,25 @@ The tasks that I have followed during the development phase were carried out in 
 
 ### Colours
 
-The colour scheme has considered based on easy accessibility for all and have been consistently maintained throughout the website. The colours were modified using [Colorswall](https://colorswall.com/). 
+Vegetarian and Vegan foods and events seem to have a very consistent theme of green with darkish brown. This is something I want to replicate as it gives the site a consistent and familiar feel. Hopefully instilling confidence in the user that food is cooked by people that love veggie and vegan food.
 
-![Color Palette](assets/features/color-palette.jpg)
+![Color Palette](assets/colour_scheme.png)
 
-### Typography
-
-Fonts were imported using Google Fonts. Roboto was used throughout with a backup of sans-serif. It was chosen for easy readability for users.
 
 ### Imagery
 
-All the imagery is related to the Indian tourist destination and website design. Some images including carousel are static. The remaining imagery was uploaded by the author to the database.
+All the imagery is related to or pictures of meat-free food. Ideally making the users mouths water and intice them into ordering food.
 
 ### Wireframes
 
-The wireframes for this projected were generated using Balsamiq. 
-- [Wieframes for Desktop](assets/wireframes/Desktop-Wireframe.pdf)
-- [Wieframes for Tablet](assets/wireframes/Tablet-Wireframes.pdf)
-- [Wieframes for Mobile](assets/wireframes/Mobile-Wireframes.pdf)
+The wireframes for this projected were generated using Figma. 
+
+<img src="assets/index.PNG" width="500" height="300" alt="Home page">
+<img src="assets/About.PNG" width="500" height="300" alt="Information on the company">
+<img src="assets/menu.PNG" width="500" height="300" alt="Place to view whats on the menu with search bar">
+<img src="assets/order.PNG" width="500" height="300" alt="Where to place the orders and input the address">
+<img src="assets/checkout.PNG" width="500" height="300" alt="portal to webpage api">
+<img src="assets/dashboard.PNG" width="500" height="300" alt="staff side dashboard">
 
 ----
 
@@ -221,81 +218,22 @@ Smart Draw was used to create a database schema to visualise the types of custom
 
 ## Home Page
 
-At the very first glimpse, user can see a Navigation menu with a search button and carousel-images on the homepage. Homepage provides the user with some quick information about the site and make use of all its features. User do not need to be registered to view a blog post. The responsive navigation bar is featured on all pages. 
+The first impression of the site will be clean and professional with the hero image in the background suggesting food is the center of the operation. It has a card positioned at the center of the screen with a large centralised order button. For first time users there are few choices to be made to get to where they will probably want to go.
 
 ![Homepage](assets/features/home-page.jpg)
 
-----
-
-- Upon scrolling down, there is destination section which indicates the available types of tourist destination blog post. Each destination card filter the post by destination name and navigate to that particular blog posts. 
-
-![Destination](assets/features/destinations-section1.jpg)
-![Destination](assets/features/destinations-section2.jpg)
-![Destination](assets/features/destinations-section3.jpg)
-
-----
-
-- User can also select a specific destination blog posts from the navbar dropdown which navigates to that specific destination blog posts.
-
-![Destination](assets/features/dropdown-destination.jpg)
-
-----
-
 ## Navbar
 
-- The navigation bar is present at the top of every page and navigates all links to the respective pages.
-- The options to Register or Log in will change to the option to log out once a user has logged in.
-- The navbar is fully responsive, collapsing into a hamburger menu when the screen size becomes smaller.
+To keep a consistent site structure the nav bar is at the top of every page. This is the main way to navigate to parallel sections of the site as the main usage of the site will be linear. This declutters the options the user is faced with but still maintains the ease of access which is so crucial to the site.
+The nav bar is collapsed on mobile and explicit on larger devices.
 
 ![Navbar](assets/features/navbar.jpg)
 
 ![Navbar](assets/features/nav-hamburger.jpg)
 
-## Navbar after loged in user
-
-* If the user is logged in (username Mahi is provided as an example here), navbar will be shown with user name and logout options. On a desktop, the navigation menu will appear as shown below:
-
-![logged-in-user-Navbar](assets/features/logged-in-user-navbar.jpg) 
-
-## User Page
-
-* This page will be only visible to logged-in user. Navbar will show this page with the username on it. When the user clicks on his/her name in the navbar, the user navigates to the User page. On this user page, the user can create new posts or view his old posts list to edit and delete any of his posts.
-
-![logged-in-user-page](assets/features/logged-in-user-page.jpg) 
-
-* When user clicks on the 'Add New Post' button, following form will be displayed.
-
-![Add-post](assets/features/add-post-form.png)
-
-* If the user does not provide an image, the following default image will be presented.
-
-![Default-post-image](assets/features/default-post-image.jpg)
-
-
-* User can access all his posts by clicking on 'View Old Post' button. User can see the list of posts in this page which he has posted till now. Here he/she can edit or delete any of his post.
-
-![user-post-list](assets/features/user-post-list.jpg) 
-![edit-delete-post](assets/features/edit-delete-post.jpg)
-
-* If the user wants to edit his/her post, the following update form will be displayed with pre-filled content.
-
-![update-post](assets/features/update-post-form.png)
-
-
-* User can see the following message to make sure to delete his post.
-
-![delete-post](assets/features/delete-post.jpg)
-
-
-* If the user hasn't posted anything before, the user will be shown that there are no posts and they can create.
-
-![no-user-post](assets/features/no-user-post.jpg) 
-
-----
-
 ## Footer
 
-- On the website footer, users can see basic information such as my social media, copyright, and a quote about Incredible India.
+The footer displays the copyright and a subtle login link for staff members. This is out of the way for most customers but still easily accessible for staff members.
 
 ![Navbar](assets/features/footer.jpg)
 
@@ -303,60 +241,33 @@ At the very first glimpse, user can see a Navigation menu with a search button a
 
 ## About Page
 
-- The About Page gives, users information about the Incredible India with a brief discription of india and the travel options to reach there.
+Since the customer base is very ethical and choice conscious, it is very important to have an about section that explains who we are and what we aim to do. Additionally having this information there can instill confidence in the customers. While this page will often not be accessed by every user it is still crucial to display this information oepnly.
 
 ![About Us](assets/features/about-us-page1.jpg)
-![About Us](assets/features/about-us2.jpg)
 
 ----
 
-## Blog Page
+## Menu Page
 
-This page enlists all the blog posts added so far to the website. The blog posts is paginated in a way that 9 posts are displayed. Further post can be accessed by clicking next button. Each blog post shows the image overlay with the destination type. The card body displays blog post title with specific fields and sliced post content along with the name of author, submitted date and shows the number of likes and comment icon in the card footer.
+If someone is wanting to try a new food this menu page is there to display everything offered and has a search bar to find what you're looking for quickly. Additionally this page will have allergy information and the main ingredients list for more niche denominations like lacto-ovo-vegetarians to decide whether they can eat it or not.
 
-![Blog Page](assets/features/blog-page1.jpg)
-![Blog Page](assets/features/blog-page2.jpg)
+### Search Bar
 
-----
+To allow for fast search or searching for products related to other products.
 
-## Post-Detail Page
+![Menu](assets/features/menu.jpeg)
 
-- When a user clicks on the image or title of the blog post, they are brought to the post details page for the selected blog post. Here the user is shown the complete details of the blog post with image, author name, created time, title, best time, ideal-duration, number of likes and comments along with full content.
-- Underneath the post description the page displays all the approved comments on that blog post posted by signed-in users. 
-- At the bottom of this page, the Comment box is visible to the users.
+## Order Page
 
-![Post-detail](assets/features/post-details1.jpg)
-![Post detail](assets/features/post-details2.jpg)
+### Radio Buttons
 
-- If user is signed-in, following comment box will appear. 
-
-![Comment box](assets/features/comment-box-login-user.jpg)
-
-- When User submit a comment or like/unlike a post, following messages/ alert displays respectively.
-
-![Comment-alert](assets/features/comment-alert.jpg)
-![Like post alert](assets/features/like-alert.jpg)
-![Unlike-post-alert](assets/features/unlike-alert.jpg)
-
-- Signed-in users can only edit/delete their own comments.
-
-![Edit Delete Comment](assets/features/edit-delete-comment.jpg)
-
-- When the user clicks on the delete button to remove his comment, following alert message pops up.
-
-![Delete Comment Alert](assets/features/delete-comment-alert.jpg)
+### Address Form
 
 
-- User navigates to the edit-page when he clicks on the edit button. Here he can edit his comment text. 
-![Edit Comment](assets/features/edit-comment.jpg)
 
-- When user clicks on update button, a successful update alert message is displayed.
 
-![Update Comment Alert](assets/features/update-comment-alert.jpg)
 
-----
-
-## Destination Page
+## Checkout Page
 
 User can select a specific destination blog posts either from destination section on home page or from the navbar dropdown which navigates to that specific destination blog posts.
 
@@ -369,61 +280,6 @@ User can select a specific destination blog posts either from destination sectio
 ![No post message](assets/features/no-destination-post.jpg)
 
 ----
-
-## Security
-In order to properly interact with the website, the user needs to have an account and sign in. This ensures security of their comments and gives them rights to create, modify and delete them.
-
-### Sign Up
-
-- User is asked to enter username and password to sign up. User will be guided by validation messages if the username exists or password is too small which was created by modifying Django inbuilt templates.
-![Signup page](assets/features/user-register-page.jpg)
-
-- When users sign up to the website they will see a message at the top of the page saying "Successfully signed in as (username)".
-![Sign Up alert](assets/features/user-registration-alert.jpg)
-
-### Sign In
-
-- User can enter username and password to sign in. User will be guided by validation messages if the username or password is not correct. This was created by modifying Django inbuilt templates.
-
-![Sign In page](assets/features/user-login-page.jpg)
-
-- When users sign in to the website they will see a message at the top of the page saying "Successfully signed in as (username)".
-
-![Sign In alert](assets/features/signed-in-alert.jpg)
-
-### Sign Out
-
-- If the user is signed-in, then only they can see Logout nav-item in navbar. User will be taken to the Sign Out page. This was created by modifying Django inbuilt templates. When the user signs out, they are redirected to homepage.
-
-![Sign out page](assets/features/logout-page.jpg)
-
-- When users log out of the website they will see a message at the top of the page saying "You have signed out".
-
-![Sign out alert](assets/features/signout-alert.jpg)
-
-----
-
-## Search Button 
-
-On the top right corner, a search input field is provided along with a button to submit. This allows the user to try and find the post they are looking for.
-
-![Search button](assets/features/search-button.jpg)
-
-- On the search results page, users can see posts related to their search. If there are posts for the user's search input, the user can click on the card result to go to the post detail page.
-
-![Search result](assets/features/search-result.jpg)
-
-- On the search results page, users will see this message if nothing is found for the search.
-
-![Search result](assets/features/no-search-result.jpg)
-
-- On the search results page, users will see this message for empty input.
-
-![Search result](assets/features/empty-input-for-search.jpg)
-
-----
-
-[Back to top ⇧](#content)
 
 ## Admin Panel/Superuser
 
