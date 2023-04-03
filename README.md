@@ -2,7 +2,7 @@
 
 **Meatless Munchies** food delivery website is developed using Django Framework as the final project for the Code Institute Bootcamp.
 
-> It is a takeaway places that specialises in **meat-free comfort/junk food**. Customer users can see images and descriptions of the food in the menu page, search through the items and order on the application. They are also able to chose whether to pay via the paypal api or at the door when their food arrives. Staff users haveto log in and can see the total revenue and orders completed for the day as well as any undelivered orders and mark them as delivered
+> It is a takeaway places that specialises in **meat-free comfort/junk food**. Customer users can see images and descriptions of the food in the menu page, search through the items and order on the application. The customer side is streamlined and intuitive to navigate for people to order easily even after a night on the town. They are able to chose whether to pay via the paypal api or at the door when their food arrives. Staff users haveto log in and can see the total revenue and orders completed for the day as well as any undelivered orders and mark them as delivered.
 
 You can view the live site here:- `IMPLEMENT THIS`
 
