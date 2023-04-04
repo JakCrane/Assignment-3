@@ -1,0 +1,47 @@
+body {
+    background-image: url(../../../media/media_images/hero-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.bg-light-green {
+    background-color: #d0d269
+}
+.light-green {
+    color: #d0d269
+}
+.green {
+    color: #5c8326
+}
+.bg-green {
+    background-color: #5c8326
+}
+.medium-green {
+    color: #1d5113
+}
+.bg-medium-green {
+    background-color: #1d5113
+}
+.dark-green {
+    color: #07331b
+}
+.bg-brown {
+    background-color: #8c4b37
+}
+
+
+#index-card {
+    background-color: #8c4b37e8
+}
+#index-btn:active, #index-btn:hover {
+    background-color: #1d5113
+}
+#index-btn {
+    background-color: #5c8326
+}
+
+
+
+/* background-attachment: fixed */

@@ -1,19 +1,19 @@
-<nav class="navbar navbar-expand-md navbar-light bg-light">
+<nav class="navbar navbar-expand-md bg-light-green">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'index' %}">Deliver</a>
+        <a class="navbar-brand dark-green" href="{% url 'index' %}">Meatless Munchies</a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                    <a class="nav-link" href="{% url 'about' %}"><p class="dark-green mb-0">About Us</p></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+                    <a class="nav-link" href="{% url 'menu' %}"><p class="dark-green mb-0">Menu</p></a>
                 </li>
             </ul>   
-            <a class="nav-link ms-auto" href="{% url 'order' %}">Place an Order!</a>
+            <a class="nav-link ms-auto" href="{% url 'order' %}"><p class="dark-green mb-0">Place an Order!</p></a>
         </div>
     </div>
 </nav> 
