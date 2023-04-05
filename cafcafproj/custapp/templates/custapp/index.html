@@ -1,15 +1,16 @@
 {% extends 'custapp/base.html' %}
 
 {% block content %}
-    <div class="container mb-5">
+
+    <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="card col-md-8 col-sm-12 p-4 text-center" id="index-card">
                 <div class="row">
                     <div class="col-12 mt-1">
-                        <h1 class="light-green">Online food delivery service</h1>
+                        <h1 class="light-green">Meatless Munchies</h1>
                     </div>
                     <div class="col-12 mt-5">
-                        <h2 class="light-green">Place an Order!</h2>
+                        <h3 class="light-green mb-3">Meat-free has never been so indulgent so <span>Order Now!</span></h3>
                         <a href="{% url 'order' %}" class="btn" id="index-btn"><h3 class="dark-green mb-0">Order Now</h3></a>
                     </div>
                 </div>

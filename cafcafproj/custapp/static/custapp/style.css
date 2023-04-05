@@ -1,9 +1,10 @@
 body {
-    background-image: url(../../../media/media_images/hero-img.jpg);
+    background-image: url(hero-img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    min-height: 100%;
+    background-attachment: fixed;
 }
 
 .bg-light-green {
@@ -31,9 +32,12 @@ body {
     background-color: #8c4b37
 }
 
-
+span {
+    white-space: nowrap ;
+  }
 #index-card {
-    background-color: #8c4b37e8
+    background-color: #8c4b37e8;
+    margin-top: 20%;
 }
 #index-btn:active, #index-btn:hover {
     background-color: #1d5113
@@ -41,7 +45,18 @@ body {
 #index-btn {
     background-color: #5c8326
 }
-
+.card-body[class*=bg-] {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.rounded-corners-top[class*=bg-] {
+    border-top-left-radius: var(--mdb-card-border-radius);
+    border-top-right-radius: var(--mdb-card-border-radius);
+}
+.rounded-corners-bottom[class*=bg-] {
+    border-bottom-left-radius: var(--mdb-card-border-radius);
+    border-bottom-right-radius: var(--mdb-card-border-radius);
+}
 
 
 /* background-attachment: fixed */
