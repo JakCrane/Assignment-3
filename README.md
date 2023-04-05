@@ -294,6 +294,7 @@ The admin site for comment model appears as shown [here](assets/features/admin-p
 * [HTML 5](https://en.wikipedia.org/wiki/HTML/)- Used to structure all the templates on the site
 * [CSS 3](https://en.wikipedia.org/wiki/CSS)- to provide extra styling to the site
 * [Python](https://www.python.org/)- To provide the functionality to the site. Packages used in the project can be found in requirements.txt
+* [JavaScript](https://www.javascript.org/)- To link up add the paypal api button.
 
 ### Django Packages
 

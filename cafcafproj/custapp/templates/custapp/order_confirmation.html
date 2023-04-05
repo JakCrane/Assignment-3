@@ -1,31 +1,36 @@
 {% extends 'custapp/base.html' %}
 
 {% block content %}
-<div class="container mb-5">
-    <div class="row justify-content-center mt-1">
+<div class="container mb-5" id="confirm-card">
+  <div class="row justify-content-center">
+    <div class="col-8 card bg-light-green">
+      <div class="row justify-content-center mt-1">
         <div class="col-md-5 col-sm-12 p-4 text-center">
-            <h1>Order Submitted!</h1>
-            <p>You should receive a confirmation email soon.</p>
-            <a href="{% url 'index' %}">Go to the homepage</a>
+            <h1 class="dark-green">Order Submitted!</h1>
+            <p class="dark-green">You should receive a confirmation email soon.</p>
+            <p class="dark-green">Go to the <a class="dark-green text-decoration-underline" href="{% url 'index' %}">homepage</a></p>
         </div>
-    </div>
+      </div>
 
-    <div class="row justify-content-center mt-5">
+      <div class="row justify-content-center mt-5">
         <div class="col-md-5 col-sm-12 text-center">
-            <h3 class="pb-3">Order Summary:</h3>
+            <h3 class="pb-3 dark-green">Order Summary:</h3>
             {% for item in items %}
-                <p>{{ item.name }} <span class="pl-3">{{ item.price }}</span></p>
+                <p class="dark-green">{{ item.name }} <span class="pl-3">{{ item.price }}</span></p>
             {% endfor %}
 
-            <p class="font-weight-bold pt-4">Total: £{{ price }}</p>
+            <p class="font-weight-bold pt-4 dark-green">Total: £{{ price }}</p>
         </div>
-    </div>
-    <div class="row justify-content-center pb-5">
+      </div>
+      <div class="row justify-content-center pb-5">
         <div class="col-md-6 text-center">
-            <h3>Pay Now or Pay with Cash on Arrival</h3>
+            <h3  class="dark-green">Pay Now or Pay with Cash on Arrival</h3>
             <div id="paypal-button"></div>
         </div>
-    </div> 
+      </div>
+    </div>
+  </div>
+     
 </div>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
 <script src="https://www.paypalobjects.com/api/checkout.js"></script>

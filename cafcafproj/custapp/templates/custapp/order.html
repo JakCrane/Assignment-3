@@ -1,14 +1,14 @@
 {% extends 'custapp/base.html' %}
 
 {% block content %}
-<div class="container mb-5">
-    <div class="row justify-content-center mt-1">
-        <div class="col-md-12 col-sm-12 p-4">
+<div class="container mb-5" id="order-card">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-12 col-sm-12 pb-4 card bg-light-green">
             <form method="POST">
                 {% csrf_token %}
-                <div class="pt-5">
+                
                     {% for app in appetizers %}
-                    <div class="row">
+                    <div class="row mt-5">
                         <div class="col-md-2 col-sm-12">
                             <img class="rounded" src="{{ app.image.url }}" width="150" height="100"/>
                         </div>
@@ -25,9 +25,7 @@
                     </div>
                     <hr />
                 {% endfor %}
-                </div>
-
-                <div class="pt-5">
+                
                     {% for entree in entrees %}
                     <div class="row mt-4">
                         <div class="col-md-2 col-sm-12">
@@ -46,9 +44,7 @@
                     </div>
                     <hr />
                     {% endfor %}
-                </div>
-
-                <div class="pt-5">
+                
                     {% for dessert in desserts %}
                     <div class="row mt-4">
                         <div class="col-md-2 col-sm-12">
@@ -67,9 +63,7 @@
                     </div>
                     <hr />
                     {% endfor %}
-                </div>
-
-                <div class="pt-5">
+                
                     {% for drink in drinks %}
                     <div class="row mt-4">
                         <div class="col-md-2 col-sm-12">
@@ -88,7 +82,7 @@
                     </div>
                     <hr />
                     {% endfor %}
-                </div>
+                
                 <div class="row">
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group pt-3">

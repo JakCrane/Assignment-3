@@ -1,11 +1,11 @@
 {% extends 'custapp/base.html' %}
 
 {% block content %}
-<div class="container mb-5">
+<div class="container mb-5"  id="confirm-card">
     <div class="row justify-content-center mt-1">
-        <div class="col-md-5 col-sm-12 p-4 text-center">
-            <h1>Payment Submitted!</h1>
-            <a href="{% url 'index' %}">Go to the homepage</a>
+        <div class="col-md-5 col-sm-12 p-4 text-center card bg-light-green">
+            <h1 class="dark-green">Payment Submitted!</h1>
+            <p class="dark-green">Go to the <a href="{% url 'index' %}" class="dark-green text-decoration-under-line">homepage</a></p>
         </div>
     </div>
 </div>
