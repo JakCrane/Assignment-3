@@ -3,62 +3,64 @@
 {% block content %}
 <div class="container mb-5" id="order-card">
     <div class="row justify-content-center mt-5">
-        <div class="col-md-12 col-sm-12 pb-4 card bg-light-green">
+        <div class="col-md-12 col-sm-12 pb-4 pt-3 mt-2 card bg-light-green">
             <form method="POST">
                 {% csrf_token %}
                 
-                    {% for app in appetizers %}
-                    <div class="row mt-5">
-                        <div class="col-md-2 col-sm-12">
-                            <img class="rounded" src="{{ app.image.url }}" width="150" height="100"/>
+                {% for wrap in wraps %}
+                    <div class="row mt-1">
+                        <div class="col-md-3 col-lg-2 col-sm-12 text-center">
+                            <img class="rounded" src="{{ wrap.image.url }}" width="150" height="100"/>
                         </div>
                         <div class="col-md-8 col-sm-12">
+                            <p class="font-weight-bold mb-0">{{ wrap.name }}</p>
                             <div class="d-flex flex-row">
                                 <div class="form-group form-check">
-                                    <input type="checkbox" name="items[]" class="form-check-input" value="{{ app.pk }}">
-                                    <label class="form-check-label">{{ app.name }}</label>
+                                    <input type="checkbox" name="items[]" class="form-check-input" value="{{ wrap.pk }}">
+                                    <label class="form-check-label">{{ wrap.price }}</label>
                                 </div>
-                                <p class="font-weight-bold pl-5">{{ app.price }}</p>
                             </div>
-                            <p>{{ app.description }}</p>
+                            
+                            <p>{{ wrap.description }}</p>
                         </div>
                     </div>
                     <hr />
                 {% endfor %}
                 
-                    {% for entree in entrees %}
+                {% for nibble in nibbles %}
                     <div class="row mt-4">
-                        <div class="col-md-2 col-sm-12">
-                            <img class="rounded" src="{{ entree.image.url }}" width="150" height="100"/>
+                        <div class="col-md-3 col-lg-2 col-sm-12 text-center">
+                            <img class="rounded" src="{{ nibble.image.url }}" width="150" height="100"/>
                         </div>
                         <div class="col-md-8 col-sm-12">
+                            <p class="font-weight-bold mb-0">{{ nibble.name }}</p>
                             <div class="d-flex flex-row">
                                 <div class="form-group form-check">
-                                    <input type="checkbox" name="items[]" class="form-check-input" value="{{ entree.pk }}">
-                                    <label class="form-check-label">{{ entree.name }}</label>
+                                    <input type="checkbox" name="items[]" class="form-check-input" value="{{ nibble.pk }}">
+                                    <label class="form-check-label">{{ nibble.price }}</label>
                                 </div>
-                                <p class="font-weight-bold pl-5">{{ entree.price }}</p>
+                                
                             </div>
-                            <p>{{ entree.description }}</p>
+                            <p>{{ nibble.description }}</p>
                         </div>
                     </div>
                     <hr />
-                    {% endfor %}
+                {% endfor %}
                 
-                    {% for dessert in desserts %}
+                    {% for soup in soups %}
                     <div class="row mt-4">
-                        <div class="col-md-2 col-sm-12">
-                            <img class="rounded" src="{{ dessert.image.url }}" width="150" height="100"/>
+                        <div class="col-md-3 col-lg-2 col-sm-12 text-center">
+                            <img class="rounded" src="{{ soup.image.url }}" width="150" height="100"/>
                         </div>
                         <div class="col-md-8 col-sm-12">
+                            <p class="font-weight-bold mb-0">{{ soup.name }}</p>
                             <div class="d-flex flex-row">
                                 <div class="form-group form-check">
-                                    <input type="checkbox" name="items[]" class="form-check-input" value="{{ dessert.pk }}">
-                                    <label class="form-check-label">{{ dessert.name }}</label>
+                                    <input type="checkbox" name="items[]" class="form-check-input" value="{{ soup.pk }}">
+                                    <label class="form-check-label">{{ soup.price }}</label>
                                 </div>
-                                <p class="font-weight-bold pl-5">{{ dessert.price }}</p>
                             </div>
-                            <p>{{ dessert.description }}</p>
+                            <p>{{ soup.description }}</p>
                         </div>
                     </div>
                     <hr />
@@ -66,16 +68,17 @@
                 
                     {% for drink in drinks %}
                     <div class="row mt-4">
-                        <div class="col-md-2 col-sm-12">
+                        <div class="col-md-3 col-lg-2 col-sm-12 text-center">
                             <img class="rounded" src="{{ drink.image.url }}" width="150" height="100"/>
                         </div>
                         <div class="col-md-8 col-sm-12">
+                            <p class="font-weight-bold mb-0">{{ drink.name }}</p>
                             <div class="d-flex flex-row">
                                 <div class="form-group form-check">
                                     <input type="checkbox" name="items[]" class="form-check-input" value="{{ drink.pk }}">
-                                    <label class="form-check-label">{{ drink.name }}</label>
+                                    <label class="form-check-label">{{ drink.price }}</label>
                                 </div>
-                                <p class="font-weight-bold pl-5">{{ drink.price }}</p>
+                                
                             </div>
                             <p>{{ drink.description }}</p>
                         </div>
