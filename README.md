@@ -4,8 +4,8 @@
 
 > It is a takeaway places that specialises in **meat-free comfort/junk food**. Customer users can see images and descriptions of the food in the menu page, search through the items and order on the application. The customer side is streamlined and intuitive to navigate for people to order easily even after a night on the town. They are able to chose whether to pay via the paypal api or at the door when their food arrives. Staff users haveto log in and can see the total revenue and orders completed for the day as well as any undelivered orders and mark them as delivered.
 
-<img src="assets/site-index-mob.png" width="500" height="300" alt="Mobile view">
-<img src="assets/site-index-mob.png" width="500" height="300" alt="Desktop View">
+<img src="assets/site-index-mob.PNG" width="150" height="300" alt="Mobile view">
+<img src="assets/site-index-dt.png" width="450" height="300" alt="Desktop View">
 
 ----
 
@@ -23,11 +23,12 @@
     - [Database Diagram](#database-diagram)
   - [Features](#features)
     - [Home Page](#home-page)
-    - [Navbar](#navbar)
-    - [Footer](#footer)
+      - [Navbar](#navbar)
+      - [Footer](#footer)
     - [About Page](#about-page)
     - [Menu Page](#about-page)
     - [Order Page](#about-page)
+    - [Search Bar](#search-bar)
     - [Checkout Page](#about-page)
     - [Superuser](#superuser)
   - [Technologies Used](#technologies-used)
@@ -176,12 +177,12 @@ All the imagery is related to or pictures of meat-free food. Ideally making the 
 
 The wireframes for this projected were generated using Figma. 
 
-<img src="assets/index.PNG" width="500" height="300" alt="Home page">
-<img src="assets/About.PNG" width="500" height="300" alt="Information on the company">
-<img src="assets/menu.PNG" width="500" height="300" alt="Place to view whats on the menu with search bar">
-<img src="assets/order.PNG" width="500" height="300" alt="Where to place the orders and input the address">
-<img src="assets/checkout.PNG" width="500" height="300" alt="portal to webpage api">
-<img src="assets/dashboard.PNG" width="500" height="300" alt="staff side dashboard">
+<img src="assets/index.PNG" width="300" height="500" alt="Home page">
+<img src="assets/About.PNG" width="300" height="500" alt="Information on the company">
+<img src="assets/menu.PNG" width="300" height="500" alt="Place to view whats on the menu with search bar">
+<img src="assets/order.PNG" width="300" height="500" alt="Where to place the orders and input the address">
+<img src="assets/checkout.PNG" width="300" height="500" alt="portal to webpage api">
+<img src="assets/dashboard.PNG" width="300" height="500" alt="staff side dashboard">
 
 ----
 
@@ -201,52 +202,53 @@ Smart Draw was used to create a database schema to visualise the types of custom
 
 The first impression of the site will be clean and professional with the hero image in the background suggesting food is the center of the operation. It has a card positioned at the center of the screen with a large centralised order button. For first time users there are few choices to be made to get to where they will probably want to go.
 
-![Homepage](assets/features/home-page.jpg)
+<img src="assets/site-index-dt.png" width="450" height="300" alt="Home Page View">
 
-## Navbar
+### Navbar
 
 To keep a consistent site structure the nav bar is at the top of every page. This is the main way to navigate to parallel sections of the site as the main usage of the site will be linear. This declutters the options the user is faced with but still maintains the ease of access which is so crucial to the site.
 The nav bar is collapsed on mobile and explicit on larger devices.
 
-![Navbar](assets/features/navbar.jpg)
-
-![Navbar](assets/features/nav-hamburger.jpg)
-
-## Footer
+### Footer
 
 The footer displays the copyright and a subtle login link for staff members. This is out of the way for most customers but still easily accessible for staff members.
-
-![Navbar](assets/features/footer.jpg)
 
 ----
 
 ## About Page
 
-Since the customer base is very ethical and choice conscious, it is very important to have an about section that explains who we are and what we aim to do. Additionally having this information there can instill confidence in the customers. While this page will often not be accessed by every user it is still crucial to display this information oepnly.
+Since the customer base is very ethical and choice conscious, it is very important to have an about section that explains who we are and what we aim to do. Additionally having this information there can instill confidence in the customers. While this page will often not be accessed by every user it is still crucial to display this information openly.
 
-![About Us](assets/features/about-us-page1.jpg)
+<img src="assets/site-about.PNG" width="450" height="300" alt="About us Page View">
+
 
 ----
 
 ## Menu Page
 
 If someone is wanting to try a new food this menu page is there to display everything offered and has a search bar to find what you're looking for quickly. Additionally this page will have allergy information and the main ingredients list for more niche denominations like lacto-ovo-vegetarians to decide whether they can eat it or not.
+<img src="assets/site-menu.PNG" width="450" height="300" alt="Menu Page View">
 
 ### Search Bar
 
 To allow for fast search or searching for products related to other products.
 
-![Menu](assets/features/menu.jpeg)
+
+
 
 ## Order Page
 
 The order page displays the food in a linear fashion so that customers can decide which products they do or dont want with the address form at the bottom. This streamlines the ordering process so they can get their order sent quickly and hastle free.
+<img src="assets/site-order-top.PNG" width="450" height="300" alt="Top of Order Page View">
+<img src="assets/site-order-bottom.PNG" width="450" height="300" alt="Top of Order Page View">
 
 ## Checkout Page
 
 This is where the paypal api button sits and shows an overview of the order including the food ordered and the total incase anything has been added or missed off by mistake. Again it is a very clean design to not distract from the utility of the website.
 
-![No post message](assets/features/no-destination-post.jpg)
+<img src="assets/site-order-confirmation.PNG" width="450" height="300" alt="Confirmation of Order Page View">
+
+Additionally there is a pay confirmation site that just says thank you for paying but is there to give visual feedback to the customer that they have successfully paid.
 
 ----
 
@@ -254,19 +256,15 @@ This is where the paypal api button sits and shows an overview of the order incl
 
 The superusers can log in through the staff portal (seen below) and can create, read, update and delete all of the orders and menu items.
 
-[here](assets/features/admin-panel-post-model.jpg)
+<img src="assets/admin-page.PNG" width="450" height="300" alt="Admin Page View">
 
 ### Admin 'MenuItem' Model Management
 
 On creating a new MenuItem the superuser can add a name, description, price, photo and category. This is then rendered on the menu and order page the next time it is loaded.
 
-The admin site for post model appears as shown [here](assets/features/admin-panel-post-model.jpg).
-
 ### Admin 'Order' Model Management
 
 Orders are generated by the user and saved down. They can be generated by the admin but in most use cases this is not what happens. The user submitting an order records what items they want and inputs their address. Automatically, the price is generated and the is-paid and is-delivered are set to false. The is-delivered can be changed by staff members via the dashboard when the order has been sent off.
-
-The admin site for comment model appears as shown [here](assets/features/admin-panel-comment-model.jpg).
 
 # Technologies Used
 
@@ -279,7 +277,6 @@ The admin site for comment model appears as shown [here](assets/features/admin-p
 
 ## Django Packages
 
-* [Gunicorn](https://gunicorn.org/)- As the server for Heroku. `please edit this`
 * [Psycopg2](https://pypi.org/project/psycopg2/)- As an adaptor for Python and PostgreSQL databases.
 * [Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)- For authentication, registration, account management.
 * [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)- To style the forms.
@@ -290,7 +287,6 @@ The admin site for comment model appears as shown [here](assets/features/admin-p
 * [Bootstrap](https://getbootstrap.com/)- Used to style the website, add responsiveness and interactivity.
 * [Git](https://git-scm.com/)- Used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub.
 * [GitHub](https://github.com/)- Used to store the project's code after being pushed from Git.
-* [Heroku](https://id.heroku.com)- Used to deploy the live project.
 * [PostgreSQL](https://www.postgresql.org/)- Database used through heroku.
 * [Figma](https://www.figma.com/)- To build the wireframes for the project.
 * [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) was used to inspect page elements, debug, troubleshoot and test features and adjust property values. Using the Lighthouse extension installed in Chrome Browser, the performance report was generated.
@@ -312,7 +308,6 @@ I used the following validation tools to validate HTML, CSS, PYTHON codes. Valid
 ## Manual Testing
 
 Testing has taken place continuously throughout the development of the project. With each feature being added then checked to be working before moving on. 
-- Youtube videos [The Dumbfounds](https://www.youtube.com/playlist?list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM) for automated testing.
 
 ----
 
@@ -347,7 +342,7 @@ Images were taken from Pexels and Canva
 
 ## Acknowledgement
 
-Special thanks to Rosemary Jones and Richey Malhotra for the emotional support along this horrible fucking readme. `Emotional Damage`
+Special thanks to all of the technical coding support provided by Richey Malhotra and all of the literary support and guidance by Rosie Jones!
 
 [Back to top](<#content>)
    
