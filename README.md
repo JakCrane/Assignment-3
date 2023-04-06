@@ -188,7 +188,7 @@ The wireframes for this projected were generated using Figma.
 
 ## Database Diagram
 
-Smart Draw was used to create a database schema to visualise the types of custom models the project requires. This schema was used as a guide to what needed to be added to each model. Below is the Database structure that this project is based on. The relationship between Entities Post, Author, Destination and Comment are shown in this diagram.
+ERDPlus was used to create a database schema to visualise the types of custom models the project requires. This schema was used as a guide to what needed to be added to each model. Below is the Database structure that this project is based on. The relationship between Order, MenuItem and Category are shown in this diagram.
 
 <img src="assets/DB.PNG" width="500" height="300" alt="ER Diagram">
 
